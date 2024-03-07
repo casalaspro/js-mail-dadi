@@ -41,6 +41,8 @@ let userEmail;
 let checkBoolean = false;
 
 checkBtnElementDOM.addEventListener('click', function(){
+  // resetto la variabile booleana
+  checkBoolean = false;
 
   // recuper0 il valore inserito dall'input
   userEmail = inputEmailElementDOM.value;
