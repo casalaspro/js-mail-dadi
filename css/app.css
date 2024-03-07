@@ -1,4 +1,12 @@
 .dice{
   aspect-ratio: 1/1;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice p{
+  font-size: 40px;
+  font-weight: 800;
 }
