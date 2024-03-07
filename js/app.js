@@ -25,6 +25,12 @@ Consigli del giorno:
 // creare un input per l mail
 // creare un bottone per inviare il dato e farlo analizzare
 // mettere un eventListener sul pulsante
+let checkBtnElementDOM = document.querySelector('.check_btn');
+checkBtnElementDOM.addEventListener('click', function(){
+
+})
+// test elemento bottone
+console.dir(checkBtnElementDOM);
 // recuperare il valore inserito
 // fare un array con diverse mail
 // fare una variabile che contenga il valore inserito dall'utente
