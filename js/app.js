@@ -84,7 +84,18 @@ let userDice, botDice;
 // creo 
 let throwBtnElementDOM = document.querySelector(".throw_dice_btn");
 throwBtnElementDOM.addEventListener('click', function(){
+  userDice = getRandomInt(6);
+  botDice = getRandomInt(6);
 
+  console.log(`User Dice: ${userDice}, Bot Dice: ${botDice}.`);
+
+  if(userDice === botDice){
+    console.log("Par");
+  }else if(userDice > botDice){
+    console.log("User Won");
+  }else if(userDice < botDice){
+    console.log("Computer Won");
+  }
 })
 
 // generare due numeri random
