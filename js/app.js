@@ -83,9 +83,29 @@ console.log(getRandomInt(6));
 let userDice, botDice;
 // creo 
 let throwBtnElementDOM = document.querySelector(".throw_dice_btn");
-throwBtnElementDOM.addEventListener('click', function(){
+throwBtnElementDOM.addEventListener('click', function(){ 
+  // attribuisco i numeri random
   userDice = getRandomInt(6);
   botDice = getRandomInt(6);
+
+  // creo elemento p
+
+  if(document.querySelector(".user_dice p") !== null && document.querySelector(".user_dice p") !== null ){
+    console.log("elimina");
+    document.querySelector(".user_dice p").remove();
+    document.querySelector(".computer_dice p").remove();
+  }
+  let pUserElement = document.createElement('p');
+  let pBotElement = document.createElement('p');
+  let userText = document.createTextNode(userDice);
+  let botText = document.createTextNode(botDice)
+  let userDiceElement = document.querySelector('.user_dice');
+  let botDiceElement = document.querySelector('.computer_dice');
+  pUserElement.append(userText);
+  pBotElement.append(botText);
+  userDiceElement.append(pUserElement);
+  botDiceElement.append(pBotElement);
+
 
   console.log(`User Dice: ${userDice}, Bot Dice: ${botDice}.`);
 
