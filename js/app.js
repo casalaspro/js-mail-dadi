@@ -72,8 +72,21 @@ checkBtnElementDOM.addEventListener('click', function(){
 
 // DADI
 // mettere un tasto che avvii il gioco dei dadi
-// mettere un eventListener su di esso che avvii il lancio dei dadi
+// creo funzione per l'estrazione di un numero da 1 a 6 intero
+function getRandomInt(maxNumber) {
+  return Math.floor((Math.random() * maxNumber)+1);
+}
+
+// test generazione numero
+console.log(getRandomInt(6));
 // due variabili : una per l'utente, una per il computer.
+let userDice, botDice;
+// creo 
+let throwBtnElementDOM = document.querySelector(".throw_dice_btn");
+throwBtnElementDOM.addEventListener('click', function(){
+
+})
+
 // generare due numeri random
 // confrontare i numeri random e vedere se è patta oppure chi ha vinto
 // restituire i valori ed il vincitore
