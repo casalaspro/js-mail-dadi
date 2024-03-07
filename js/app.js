@@ -24,19 +24,51 @@ Consigli del giorno:
 // MAIL
 // creare un input per l mail
 // creare un bottone per inviare il dato e farlo analizzare
-// mettere un eventListener sul pulsante
-let checkBtnElementDOM = document.querySelector('.check_btn');
+
+// creo nodo bottone
+const checkBtnElementDOM = document.querySelector('.check_btn');
+
+// creo nodo input
+const inputEmailElementDOM = document.getElementById('email');
+
+// fare un array con diverse mail
+let emailList = ["ciccio@gmail.com", "pino@msn.com", "cagnetti@precisetti.it", "castagneveryday@hotmail.it"];
+
+// creo contenitore valore input
+let userEmail;
+
+// creao una variabile booleana per il controllo
+let checkBoolean = false;
+
 checkBtnElementDOM.addEventListener('click', function(){
 
+  // recuper0 il valore inserito dall'input
+  userEmail = inputEmailElementDOM.value;
+
+  // controllo che il valore richiamato non sia vuoto
+  if( userEmail === ''){
+    console.log("Inserire una mail");
+  }else{
+    // ciclo for che confronti le mail nell'array con quela inserita dal'utente
+  for(let indexEmail =0 ; indexEmail<emailList.length ; indexEmail++){
+      // confronto le mail
+      if(userEmail === emailList[indexEmail]){
+        // console.log('okkkkkkk');modifico la variabile booleana
+        checkBoolean = true;
+      }
+    }
+    
+  }
+
+  // controllo se la variabile booleana è stata modificata in true
+  if(checkBoolean === true){
+    // approvo l'accesso
+    console.log("email approvata");
+  }else{
+    // nego l'accesso
+    console.log("email non corretta");
+  }
 })
-// test elemento bottone
-console.dir(checkBtnElementDOM);
-// recuperare il valore inserito
-// fare un array con diverse mail
-// fare una variabile che contenga il valore inserito dall'utente
-// fare una variabile booleana con false per contenere l'esito della verifica mail
-// fare un ciclo che confronti le mail e che nel caso modifichi in TRUE la variabile di controllo
-// fare un if che verifichi la variabile di controllo e nel caso avvii una funzione che restituisca un messaggio
 
 // DADI
 // mettere un tasto che avvii il gioco dei dadi
